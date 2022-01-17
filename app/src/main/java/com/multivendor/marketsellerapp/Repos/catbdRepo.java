@@ -10,6 +10,7 @@ import com.multivendor.marketsellerapp.Models.categoriesModel;
 import com.multivendor.marketsellerapp.Models.loginresResponse;
 import com.multivendor.marketsellerapp.Models.productitemModel;
 import com.multivendor.marketsellerapp.Models.sellerApiResp;
+import com.multivendor.marketsellerapp.api_baseurl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class catbdRepo {
     private MutableLiveData<List<categoriesModel>> cattModel=new MutableLiveData<>();
     private List<productitemModel> allproductlist=new ArrayList<>();
     private MutableLiveData<List<productitemModel>> allproductModel=new MutableLiveData<>();
+    private final api_baseurl baseurl=new api_baseurl();
     public catbdRepo getInstance() {
         if(instance==null) {
             instance=new catbdRepo();
@@ -63,7 +65,7 @@ public class catbdRepo {
     }
 
     private void getallproductdatafromSource(String userid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         com.multivendor.marketsellerapp.APIWork.LogregApiInterface logregApiInterface=retrofit.create(com.multivendor.marketsellerapp.APIWork.LogregApiInterface.class);
@@ -102,7 +104,7 @@ public class catbdRepo {
     }
 
     private void getproductdatafromSource(String userid,String catid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         com.multivendor.marketsellerapp.APIWork.LogregApiInterface logregApiInterface=retrofit.create(com.multivendor.marketsellerapp.APIWork.LogregApiInterface.class);

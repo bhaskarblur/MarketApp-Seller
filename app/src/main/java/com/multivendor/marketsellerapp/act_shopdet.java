@@ -37,7 +37,7 @@ public class act_shopdet extends AppCompatActivity {
     private ArrayList<Integer> categarray = new ArrayList<>();
     private Boolean registering = false;
     SharedPreferences sharedPreferences;
-
+    private final api_baseurl baseurl=new api_baseurl();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +58,7 @@ public class act_shopdet extends AppCompatActivity {
             overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
         }
         else if (!shopregid.equals("yes")) {
-            Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+            Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                     .addConverterFactory(GsonConverterFactory.create()).build();
 
             com.multivendor.marketsellerapp.APIWork.LogregApiInterface logregApiInterface = retrofit.create(
@@ -124,7 +124,7 @@ public class act_shopdet extends AppCompatActivity {
                         sdbinding.progressBar2.setVisibility(View.VISIBLE);
                         sdbinding.shopdetreg.setVisibility(View.INVISIBLE);
                         String userid = sharedPreferences.getString("userid", "");
-                        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                                 .addConverterFactory(GsonConverterFactory.create()).build();
 
                         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -256,7 +256,7 @@ public class act_shopdet extends AppCompatActivity {
 //                builder.show();
 //            }
 //        });
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         com.multivendor.marketsellerapp.APIWork.LogregApiInterface logregApiInterface = retrofit.create(
@@ -287,7 +287,7 @@ public class act_shopdet extends AppCompatActivity {
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                             if (!parent.getItemAtPosition(position).equals("Select State")) {
                                 sdbinding.statet.setText(parent.getItemAtPosition(position).toString());
-                                Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                                Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                                         .addConverterFactory(GsonConverterFactory.create()).build();
 
                                 com.multivendor.marketsellerapp.APIWork.LogregApiInterface logregApiInterface = retrofit.create(

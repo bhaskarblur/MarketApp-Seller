@@ -34,6 +34,7 @@ public class notiFragment extends Fragment {
     private FragmentNotiBinding nfbinding;
     private com.multivendor.marketsellerapp.ViewModels.notiViewModel notiViewModel;
     private com.multivendor.marketsellerapp.Adapters.notiAdapter notiAdapter;
+
     public notiFragment() {
         // Required empty public constructor
     }

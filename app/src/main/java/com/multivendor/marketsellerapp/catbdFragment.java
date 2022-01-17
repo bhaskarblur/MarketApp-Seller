@@ -68,6 +68,7 @@ public class catbdFragment extends Fragment {
     private com.multivendor.marketsellerapp.ViewModels.catbdViewModel catbdViewModel;
     private SharedPreferences shpref;
     private Uri catimgsel;
+    private final api_baseurl baseurl=new api_baseurl();
     String userId;
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -233,7 +234,7 @@ public class catbdFragment extends Fragment {
                 } else {
                     ctbinding.saveprogressbar.setVisibility(View.VISIBLE);
                     ctbinding.catsave.setVisibility(View.INVISIBLE);
-                    Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                    Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                             .addConverterFactory(GsonConverterFactory.create()).build();
 
                     LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

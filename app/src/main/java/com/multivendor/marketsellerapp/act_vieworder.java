@@ -39,7 +39,7 @@ public class act_vieworder extends AppCompatActivity {
     private List<productitemModel> prodlist = new ArrayList<>();
     private String orderid;
     private String storeid;
-
+    private final api_baseurl baseurl=new api_baseurl();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -133,7 +133,7 @@ public class act_vieworder extends AppCompatActivity {
 
     private void refreshDataFromServer(String storeid, String orderid) {
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -287,7 +287,7 @@ public class act_vieworder extends AppCompatActivity {
     }
 
     private void Updatestatus(String status) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

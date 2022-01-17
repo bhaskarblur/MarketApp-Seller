@@ -53,7 +53,7 @@ public class catProductsFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private SharedPreferences shpref;
-
+    private final api_baseurl baseurl=new api_baseurl();
     String userId;
     String catname;
     String catid;
@@ -131,7 +131,7 @@ public class catProductsFragment extends Fragment {
                         setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                                Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                                         .addConverterFactory(GsonConverterFactory.create()).build();
                                 LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
 

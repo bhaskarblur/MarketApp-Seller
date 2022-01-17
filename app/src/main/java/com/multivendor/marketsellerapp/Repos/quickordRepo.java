@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.multivendor.marketsellerapp.APIWork.LogregApiInterface;
 
 import com.multivendor.marketsellerapp.Models.quickorderModel;
+import com.multivendor.marketsellerapp.api_baseurl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class quickordRepo {
     private MutableLiveData<quickorderModel.quickordResult> wholedata=new MutableLiveData<>();
     private MutableLiveData<List<quickorderModel.quick_products>> prodModel = new MutableLiveData<>();
 
-
+    private final api_baseurl baseurl=new api_baseurl();
     public quickordRepo getInstance() {
         if (instance == null) {
             instance = new quickordRepo();
@@ -58,7 +59,7 @@ public class quickordRepo {
 
 
     private void getprodDataFromSource(String storeid, String quickordid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

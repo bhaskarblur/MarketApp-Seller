@@ -44,7 +44,7 @@ public class act_quickord extends AppCompatActivity {
     List<quickorderModel.quick_products> finalprodlist = new ArrayList<>();
     String storeid;
     String quickorderid;
-
+    private final api_baseurl baseurl=new api_baseurl();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -370,7 +370,7 @@ public class act_quickord extends AppCompatActivity {
                     Toast.makeText(act_quickord.this, "Please Enter Expected Delivery Time!", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                    Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                             .addConverterFactory(GsonConverterFactory.create()).build();
 
                     LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -436,7 +436,7 @@ public class act_quickord extends AppCompatActivity {
         qobinding.ordrejbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                         .addConverterFactory(GsonConverterFactory.create()).build();
 
                 LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -480,7 +480,7 @@ public class act_quickord extends AppCompatActivity {
         qobinding.ordpackbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                         .addConverterFactory(GsonConverterFactory.create()).build();
 
                 LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -522,7 +522,7 @@ public class act_quickord extends AppCompatActivity {
         qobinding.ordredpickbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                         .addConverterFactory(GsonConverterFactory.create()).build();
 
                 LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -563,7 +563,7 @@ public class act_quickord extends AppCompatActivity {
         qobinding.ordoutdelv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                         .addConverterFactory(GsonConverterFactory.create()).build();
 
                 LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

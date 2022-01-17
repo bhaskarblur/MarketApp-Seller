@@ -9,6 +9,7 @@ import com.multivendor.marketsellerapp.Models.cartModel;
 import com.multivendor.marketsellerapp.Models.orderprodModel;
 import com.multivendor.marketsellerapp.Models.productitemModel;
 import com.multivendor.marketsellerapp.Models.sellerApiResp;
+import com.multivendor.marketsellerapp.api_baseurl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +28,7 @@ public class vieworderRepo {
     public MutableLiveData<cartModel.singlecartResult> getordinfo=new MutableLiveData<>();
     private List<productitemModel> allproductlist=new ArrayList<>();
     private MutableLiveData<List<productitemModel>> allproductModel=new MutableLiveData<>();
+    private final api_baseurl baseurl=new api_baseurl();
     public vieworderRepo getInstance() {
         if(instance==null) {
             instance=new vieworderRepo();
@@ -49,7 +51,7 @@ public class vieworderRepo {
     }
 
     private void getOrdInfo(String storeid,String orderid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -94,7 +96,7 @@ public class vieworderRepo {
     }
 
     private void getallproductdatafromSource(String userid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         com.multivendor.marketsellerapp.APIWork.LogregApiInterface logregApiInterface=retrofit.create(com.multivendor.marketsellerapp.APIWork.LogregApiInterface.class);

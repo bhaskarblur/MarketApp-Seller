@@ -43,7 +43,7 @@ public class profileFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     private SharedPreferences sharedPreferences;
-
+    private final api_baseurl baseurl=new api_baseurl();
     public profileFragment() {
         // Required empty public constructor
     }
@@ -119,7 +119,7 @@ public class profileFragment extends Fragment {
         else {
             pfbinding.shopdelvcode.setText("Delivery Code: ");
         }
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         com.multivendor.marketsellerapp.APIWork.LogregApiInterface logregApiInterface = retrofit.create(

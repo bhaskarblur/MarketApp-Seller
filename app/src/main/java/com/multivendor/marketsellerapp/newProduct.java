@@ -40,7 +40,6 @@ import com.google.android.gms.tasks.Task;
 import com.multivendor.marketsellerapp.APIWork.ApiWork;
 import com.multivendor.marketsellerapp.Adapters.addszAdapter;
 import com.multivendor.marketsellerapp.Adapters.reviewAdapter;
-import com.multivendor.marketsellerapp.Constants.api_baseurl;
 import com.multivendor.marketsellerapp.Models.newProductModel;
 import com.multivendor.marketsellerapp.databinding.FragmentNewProductBinding;
 import com.squareup.picasso.Picasso;
@@ -117,7 +116,7 @@ public class newProduct extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding=FragmentNewProductBinding.inflate(inflater,container,false);
-        getlatlong();
+        //getlatlong();
         LoadData();
         viewfuncs();
         return binding.getRoot();
@@ -191,7 +190,7 @@ public class newProduct extends Fragment {
 
                     Log.d("size",size.toString());
                 }
-                Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.apibaseurl)
+                Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                         .addConverterFactory(GsonConverterFactory.create()).build();
 
                 ApiWork apiWork = retrofit.create(ApiWork.class);
@@ -252,7 +251,7 @@ public class newProduct extends Fragment {
 
 
     private void LoadData() {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.apibaseurl)
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl. baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         ApiWork apiWork = retrofit.create(ApiWork.class);

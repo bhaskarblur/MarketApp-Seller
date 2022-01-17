@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.multivendor.marketsellerapp.APIWork.LogregApiInterface;
 import com.multivendor.marketsellerapp.Models.notiModel;
+import com.multivendor.marketsellerapp.api_baseurl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,7 @@ public class notiRepo {
     public notiRepo instance;
     private MutableLiveData<List<notiModel.notiResult>> notiData=new MutableLiveData<>();
     private List<notiModel.notiResult> notiList=new ArrayList<>();
-
+    private final api_baseurl baseurl=new api_baseurl();
     public notiRepo getInstance() {
         if(instance==null) {
             instance=new notiRepo();
@@ -41,7 +42,7 @@ public class notiRepo {
     }
 
     private void getordernotis(String userid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -75,7 +76,7 @@ public class notiRepo {
     }
 
     private void getquickordnotis(String userid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -108,7 +109,7 @@ public class notiRepo {
     }
 
     private void getbillnotis(String userid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

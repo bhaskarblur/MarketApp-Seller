@@ -91,7 +91,7 @@ public class profileSettings extends AppCompatActivity {
     private FusedLocationProviderClient fusedLocationProviderClient;
     private String mLastLocation;
     SharedPreferences shpref;
-
+    private final api_baseurl baseurl=new api_baseurl();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -220,7 +220,7 @@ public class profileSettings extends AppCompatActivity {
     }
 
     private void loadData(String userid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         com.multivendor.marketsellerapp.APIWork.LogregApiInterface logregApiInterface = retrofit.create(
@@ -435,7 +435,7 @@ public class profileSettings extends AppCompatActivity {
             public void onClick(View v) {
                 psbinding.progressBar4.setVisibility(View.VISIBLE);
                 psbinding.updatebtn.setVisibility(View.INVISIBLE);
-                Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                         .addConverterFactory(GsonConverterFactory.create()).build();
 
                 LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

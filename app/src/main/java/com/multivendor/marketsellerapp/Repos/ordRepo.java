@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.multivendor.marketsellerapp.APIWork.LogregApiInterface;
 import com.multivendor.marketsellerapp.Models.cartModel;
 import com.multivendor.marketsellerapp.Models.ordersModel;
+import com.multivendor.marketsellerapp.api_baseurl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +29,7 @@ public class ordRepo {
     private MutableLiveData<List<cartModel.singlecartResult>> pendordModel=new MutableLiveData<>();;
     private MutableLiveData<List<cartModel.singlecartResult>> delvordModel=new MutableLiveData<>();;
     private MutableLiveData<List<cartModel.singlecartResult>> rejordModel=new MutableLiveData<>();;
-
+    private final api_baseurl baseurl=new api_baseurl();
     public ordRepo getInstance() {
         if(instance==null) {
             instance=new ordRepo();
@@ -46,7 +47,7 @@ public class ordRepo {
     }
 
     private void getacpordFromSource(String storeid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -90,7 +91,7 @@ public class ordRepo {
     }
 
     private void getpendordFromSource(String storeid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -134,7 +135,7 @@ public class ordRepo {
     }
 
     private void getdelvordFromSource(String storeid) {
-            Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+            Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl  )
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -177,7 +178,7 @@ public class ordRepo {
 
     private void getrejordFromSource(String storeid) {
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

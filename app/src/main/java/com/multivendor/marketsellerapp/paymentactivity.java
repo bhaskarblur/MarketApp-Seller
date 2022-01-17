@@ -42,6 +42,7 @@ public class paymentactivity extends AppCompatActivity implements PaymentResultL
     private String razorord_id="";
     String GOOGLE_PAY_PACKAGE_NAME = "com.google.android.apps.nbu.paisa.user";
     int GOOGLE_PAY_REQUEST_CODE = 123;
+    private final api_baseurl baseurl=new api_baseurl();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -149,7 +150,7 @@ public class paymentactivity extends AppCompatActivity implements PaymentResultL
 
     private void paybillAPI(String statusrec) {
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

@@ -36,6 +36,7 @@ public class Loginact extends AppCompatActivity {
     ActivityLoginactBinding lgbinding;
     private SharedPreferences setregist;
     private String token;
+    private final api_baseurl baseurl=new api_baseurl();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,7 +88,7 @@ public class Loginact extends AppCompatActivity {
          lgbinding.loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                         .addConverterFactory(GsonConverterFactory.create()).build();
 
                 LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

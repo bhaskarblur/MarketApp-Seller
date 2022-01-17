@@ -45,6 +45,7 @@ public class Mainarea extends AppCompatActivity {
     private Integer backclicks=0;
     final int PERMISSION_CODE=1001;
     private SharedPreferences sharedPreferences;
+    private final api_baseurl baseurl=new api_baseurl();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,7 +121,7 @@ public class Mainarea extends AppCompatActivity {
         });
         sharedPreferences = getSharedPreferences("userlogged", 0);
         String userid = sharedPreferences.getString("userid", "");
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

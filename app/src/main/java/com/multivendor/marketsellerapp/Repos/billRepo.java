@@ -7,6 +7,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.multivendor.marketsellerapp.APIWork.LogregApiInterface;
 import com.multivendor.marketsellerapp.Models.billModel;
 import com.multivendor.marketsellerapp.Models.quickorderModel;
+import com.multivendor.marketsellerapp.api_baseurl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +25,7 @@ public class billRepo {
     private MutableLiveData<List<billModel.billresult>> pendModel=new MutableLiveData<>();
     private List<billModel.billresult> complist=new ArrayList<>();
     private MutableLiveData<List<billModel.billresult>> compModel=new MutableLiveData<>();
-
+    private final api_baseurl baseurl=new api_baseurl();
     public billRepo getInstance() {
         if(instance==null) {
             instance=new billRepo();
@@ -52,7 +53,7 @@ public class billRepo {
     }
 
     private void getcompData(String storeid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -86,7 +87,7 @@ public class billRepo {
 
 
     private void getpenData(String storeid) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

@@ -29,7 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Signinact extends AppCompatActivity {
     ActivitySigninactBinding sgbinding;
     private Boolean otpsent=false;
-
+    private final api_baseurl baseurl=new api_baseurl();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,7 +82,7 @@ public class Signinact extends AppCompatActivity {
                 sgbinding.signpass.setSelection( sgbinding.signpass.getText().length());
             }
         });
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
         sgbinding.getotpbtn.setOnClickListener(new View.OnClickListener() {
             @Override

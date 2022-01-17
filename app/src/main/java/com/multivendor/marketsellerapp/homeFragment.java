@@ -65,6 +65,8 @@ public class homeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     String userid;
+    private final api_baseurl baseurl=new api_baseurl();
+
 
     public homeFragment() {
         // Required empty public constructor
@@ -229,7 +231,7 @@ public class homeFragment extends Fragment {
 
     private void loadData(String userId) {
 
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         com.multivendor.marketsellerapp.APIWork.LogregApiInterface logregApiInterface = retrofit.create(
@@ -269,7 +271,7 @@ public class homeFragment extends Fragment {
     }
 
     private void loadShopstats() {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
@@ -462,7 +464,7 @@ public class homeFragment extends Fragment {
 
 
     public void updateStatus(String status) {
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);

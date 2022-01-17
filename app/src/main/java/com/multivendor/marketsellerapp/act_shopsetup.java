@@ -27,6 +27,7 @@ public class act_shopsetup extends AppCompatActivity {
     private ActivityActShopsetupBinding spbinding;
     SharedPreferences sharedPreferences;
     private Boolean updaing=false;
+    private final api_baseurl baseurl=new api_baseurl();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +47,7 @@ public class act_shopsetup extends AppCompatActivity {
 
     private void loadData() {
         String userId=sharedPreferences.getString("userid","");
-        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         com.multivendor.marketsellerapp.APIWork.LogregApiInterface logregApiInterface=retrofit.create(
@@ -134,7 +135,7 @@ public class act_shopsetup extends AppCompatActivity {
                         spbinding.progressBar3.setVisibility(View.VISIBLE);
                         spbinding.shsetupd.setVisibility(View.INVISIBLE);
                         String userid = sharedPreferences.getString("userid", "");
-                        Retrofit retrofit = new Retrofit.Builder().baseUrl("http://lmartsolutions.com/api/")
+                        Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                                 .addConverterFactory(GsonConverterFactory.create()).build();
 
                         LogregApiInterface logregApiInterface = retrofit.create(LogregApiInterface.class);
