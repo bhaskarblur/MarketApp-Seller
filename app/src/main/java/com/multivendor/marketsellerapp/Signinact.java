@@ -60,7 +60,6 @@ public class Signinact extends AppCompatActivity {
 
     private void viewfunc() {
 
-
         sgbinding.passinvisimg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

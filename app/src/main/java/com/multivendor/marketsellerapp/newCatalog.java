@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationManager;
@@ -14,6 +15,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -21,9 +23,11 @@ import android.os.Handler;
 import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
@@ -35,9 +39,11 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.multivendor.marketsellerapp.Adapters.nbyshopAdapter;
 import com.multivendor.marketsellerapp.Models.newProductModel;
+import com.multivendor.marketsellerapp.Repos.catbdRepo;
 import com.multivendor.marketsellerapp.ViewModels.homeViewModel;
 import com.multivendor.marketsellerapp.databinding.FragmentNewCatalogBinding;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -94,36 +100,17 @@ public class newCatalog extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        categfragViewModel=new ViewModelProvider(getActivity()).get(homeViewModel.class);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         shbinding=FragmentNewCatalogBinding.inflate(inflater,container,false);
-
-        Bundle bundle=getArguments();
-        String lat=bundle.getString("lat","");
-        String longit=bundle.getString("long","");
-        String cityname=getActivity().getSharedPreferences("userlogged",0).getString("userid","");
         getlatlong();
-        categfragViewModel.getlocation(userid,lat,longit,cityname);
-        categfragViewModel.getnbyshopModel().observe(getActivity(), new Observer<newProductModel.homeprodResult>() {
-            @Override
-            public void onChanged(newProductModel.homeprodResult homeprodResult) {
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (homeprodResult.getAll_products().size() > 0) {
-                            loadsearchres();
-                            nbyshopAdapter.notifyDataSetChanged();
 
-                        }
-                    }
-                }, 200);
-            }
-        });
         viewfunctions();
-        loadsearchres();
+
         return shbinding.getRoot();
     }
     @SuppressLint("MissingPermission")
@@ -155,6 +142,62 @@ public class newCatalog extends Fragment {
                         Geocoder geocoder = new Geocoder(getContext()
                                 , Locale.getDefault());
 
+                        List<Address> addresses = null;
+                        String cityname = null;
+                        categfragViewModel.getlocation(userid,lat,longit,"Ludhiana");
+                        categfragViewModel.getnbyshopModel().observe(getActivity(), new Observer<newProductModel.homeprodResult>() {
+                            @Override
+                            public void onChanged(newProductModel.homeprodResult homeprodResult) {
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if(homeprodResult.getAll_products()!=null) {
+                                            Log.d("fucku",String.valueOf(homeprodResult.getAll_products().size()));
+                                                if (homeprodResult.getAll_products().size() > 0) {
+
+                                                    shbinding.searchres.setVisibility(View.VISIBLE);
+                                                    nbyshopAdapter = new nbyshopAdapter(getContext(),homeprodResult.getAll_products());
+                                                    LinearLayoutManager glm = new LinearLayoutManager(getContext());
+                                                    glm.setOrientation(RecyclerView.VERTICAL);
+                                                    shbinding.searchres.setLayoutManager(glm);
+                                                    shbinding.searchres.setAdapter(nbyshopAdapter);
+
+
+                                            }
+                                        }
+                                    }
+                                }, 200);
+                            }
+                        });
+
+                        try {
+                            addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+                            cityname=addresses.get(0).getLocality().toString();
+                            categfragViewModel.getlocation(userid,lat,longit,"Ludhiana");
+                            categfragViewModel.getnbyshopModel().observe(getActivity(), new Observer<newProductModel.homeprodResult>() {
+                                @Override
+                                public void onChanged(newProductModel.homeprodResult homeprodResult) {
+                                    new Handler().postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            if(homeprodResult.getAll_products()!=null) {
+                                                if (homeprodResult.getAll_products().size() > 0) {
+                                                    loadsearchres();
+                                                    Toast.makeText(getContext(), "Hello!", Toast.LENGTH_SHORT).show();
+
+
+                                                }
+                                            }
+                                        }
+                                    }, 200);
+                                }
+                            });
+
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+
+
 
                     } else {
 
@@ -170,7 +213,34 @@ public class newCatalog extends Fragment {
                                 longit = String.valueOf(location1.getLongitude());
                                 Geocoder geocoder = new Geocoder(getContext()
                                         , Locale.getDefault());
+                                String cityname = null;
+                                List<Address> addresses = null;
+                                try {
+                                    addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
+                                    cityname=addresses.get(0).getLocality().toString();
+                                    categfragViewModel.getlocation(userid,lat,longit,"Ludhiana");
+                                    categfragViewModel.getnbyshopModel().observe(getActivity(), new Observer<newProductModel.homeprodResult>() {
+                                        @Override
+                                        public void onChanged(newProductModel.homeprodResult homeprodResult) {
+                                            new Handler().postDelayed(new Runnable() {
+                                                @Override
+                                                public void run() {
+                                                    if(homeprodResult.getAll_products()!=null) {
+                                                        if (homeprodResult.getAll_products().size() > 0) {
+                                                            loadsearchres();
+                                                            Toast.makeText(getContext(), "Hello!", Toast.LENGTH_SHORT).show();
 
+
+                                                        }
+                                                    }
+                                                }
+                                            }, 200);
+                                        }
+                                    });
+
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
 
                             }
                         };
@@ -187,12 +257,7 @@ public class newCatalog extends Fragment {
 
     }
     private void loadsearchres() {
-        shbinding.searchres.setVisibility(View.INVISIBLE);
-        nbyshopAdapter = new nbyshopAdapter(getContext(), categfragViewModel.getnbyshopModel().getValue().getAll_products());
-        LinearLayoutManager glm = new LinearLayoutManager(getContext());
-        glm.setOrientation(RecyclerView.VERTICAL);
-        shbinding.searchres.setLayoutManager(glm);
-        shbinding.searchres.setAdapter(nbyshopAdapter);
+
 
         shbinding.catalsearch.addTextChangedListener(new TextWatcher() {
             @Override

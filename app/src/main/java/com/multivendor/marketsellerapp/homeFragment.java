@@ -302,7 +302,7 @@ public class homeFragment extends Fragment {
 
             @Override
             public void onFailure(Call<sellerApiResp.reviewresp> call, Throwable t) {
-                Log.d("Failure", t.getMessage());
+                Log.d("Failure68", t.getMessage());
             }
         });
 
@@ -366,7 +366,7 @@ public class homeFragment extends Fragment {
 
             @Override
             public void onFailure(Call<sellerApiResp.statusUpdateResp> call, Throwable throwable) {
-                Log.d("Failure",String.valueOf(throwable.getMessage()));
+                Log.d("Failure67",String.valueOf(throwable.getMessage()));
             }
         });
     }
@@ -501,7 +501,7 @@ public class homeFragment extends Fragment {
 
             @Override
             public void onFailure(Call<sellerApiResp.statusUpdateResp> call, Throwable throwable) {
-                Log.d("Failure",String.valueOf(throwable.getMessage()));
+                Log.d("Failure69",String.valueOf(throwable.getMessage()));
             }
         });
     }
@@ -568,6 +568,9 @@ public class homeFragment extends Fragment {
 
     }
 
-
-    
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        getActivity().getViewModelStore().clear();
+    }
 }

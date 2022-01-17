@@ -374,9 +374,14 @@ public class profileSettings extends AppCompatActivity {
     }
 
     private void viewfunctions() {
-
-
-
+        psbinding.contbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(profileSettings.this, Mainarea.class));
+                overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
+                finish();
+            }
+        });
         psbinding.passchange.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {

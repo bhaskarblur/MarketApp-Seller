@@ -73,7 +73,7 @@ public class homeRepo {
 
             @Override
             public void onFailure(Call<cartModel.multcartResp> call, Throwable t) {
-                Log.d("failure:", t.getMessage());
+                Log.d("failure11:", t.getMessage());
             }
         });
 
@@ -87,6 +87,7 @@ public class homeRepo {
 
     private void getnbyshopsdatafromSource(String userid,String lat,String longit,String cityname) {
         Log.d("latandlong",lat+","+longit);
+        Log.d("city_name",cityname);
         Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
@@ -105,10 +106,10 @@ public class homeRepo {
                 newProductModel.homeprodResp storedata = response.body();
 
 
-                Log.d("message12",storedata.getSuccess());
+
 
                 if(storedata.getResult()!=null) {
-
+                    Log.d("message12",storedata.getSuccess());
                     nyshopdata.setValue(storedata.getResult());
                 }
 
@@ -158,7 +159,7 @@ public class homeRepo {
 
             @Override
             public void onFailure(Call<quickorderModel.quickordResp> call, Throwable throwable) {
-                Log.d("failure:", throwable.getMessage());
+                Log.d("failure11:", throwable.getMessage());
             }
         });
 
@@ -184,7 +185,7 @@ public class homeRepo {
 
             @Override
             public void onFailure(Call<quickorderModel.quickordResp> call, Throwable throwable) {
-                Log.d("failure:", throwable.getMessage());
+                Log.d("failure12:", throwable.getMessage());
             }
         });
     }
