@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/drawable/borderbg.xml" value="0.18076923076923077" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/drawable/new_loginbtnbg.xml" value="0.18076923076923077" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/drawable/redborderbg.xml" value="0.18076923076923077" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_act_mybills.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_act_quickord.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_act_shopdet.xml" value="0.2" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_act_shopsetup.xml" value="0.22" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_act_vieworder.xml" value="0.18" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_loginact.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_mainarea.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_orderplacedactivity.xml" value="0.1675213675213675" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_paymentactivity.xml" value="0.1675213675213675" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_profile_settings.xml" value="0.2" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_signinact.xml" value="0.22" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/activity_splashscreen.xml" value="0.16540084388185655" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/addsizeoth_lay.xml" value="0.33" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/bill_lay.xml" value="0.22" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/billpaid_lay.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/catproducts_lay.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/cats_lay.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/change_pass.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/earn_lay.xml" value="0.33" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/forg_pass1.xml" value="0.22" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/forg_pass2.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/fragment_cat_products.xml" value="0.2" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/fragment_catbd.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/fragment_noti.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/fragment_ordfragment.xml" value="0.22" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/fragment_quickorder.xml" value="0.33" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/hist_lay.xml" value="0.1675213675213675" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/homequickord_lay.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/newordlay.xml" value="0.5" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/noti_lay.xml" value="0.1675213675213675" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/orderproditem_lay.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/orders_lay.xml" value="0.33" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/ordprod_lay.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/ordrejDialog.xml" value="0.22" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/productadddialog.xml" value="0.25" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/productitem_lay.xml" value="0.33" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/productupdatedialog.xml" value="0.22" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/qord_lay.xml" value="0.1675213675213675" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/qordimg_lay.xml" value="0.1675213675213675" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/quickfraglay.xml" value="0.39660056657223797" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/reviews_lay.xml" value="0.22" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/showsizeoth_lay.xml" value="0.67" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/viewitemdialog.xml" value="0.21" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/layout/zoom_imagedialog.xml" value="0.16540084388185655" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/mipmap-anydpi-v26/new_applogo.xml" value="0.1" />
+        <entry key="..\:/Android finished projects/Market Seller App/app/src/main/res/mipmap-anydpi-v26/new_applogo_round.xml" value="0.1" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.1/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_act_shopsetup.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.1/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_mainarea.xml" value="0.1425925925925926" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.1/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_profile_settings.xml" value="0.23404255319148937" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.1/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_splashscreen.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.1/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.1/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.1/MarketApp Seller/Market Seller App/app/src/main/res/layout/viewitemdialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.1/MarketApp Seller/Market Seller App/app/src/main/res/layout/zoom_imagedialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.2/MarketApp Seller/Market Seller App/app/src/main/res/drawable/new_loginbtnbg.xml" value="0.2203125" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.2/MarketApp Seller/Market Seller App/app/src/main/res/drawable/onboardingposcircle.xml" value="0.2203125" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.2/MarketApp Seller/Market Seller App/app/src/main/res/drawable/storebigbg.xml" value="0.2203125" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.2/MarketApp Seller/Market Seller App/app/src/main/res/drawable/storecardbg.xml" value="0.2203125" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.2/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_profile_settings.xml" value="0.33" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.2/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_cat_products.xml" value="0.22" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.2/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_catbd.xml" value="0.25" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.2/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_home.xml" value="0.6348167539267016" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.2/MarketApp Seller/Market Seller App/app/src/main/res/layout/productadddialog.xml" value="0.33" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.2/MarketApp Seller/Market Seller App/app/src/main/res/layout/productitem_lay.xml" value="0.5" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/drawable/loginbtnbg.xml" value="0.2203125" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_act_mybills.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_act_quickord.xml" value="0.32858340318524726" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_act_shopdet.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_act_shopsetup.xml" value="0.3263946711074105" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_act_vieworder.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_loginact.xml" value="0.42915811088295686" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_mainarea.xml" value="0.38762214983713356" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_orderplacedactivity.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_paymentactivity.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_profile_settings.xml" value="0.22" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_signinact.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_splashscreen.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/addsizeoth_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/bill_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/billpaid_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/catproducts_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/cats_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/change_pass.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/earn_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/forg_pass1.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/forg_pass2.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_cat_products.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_catbd.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_home.xml" value="0.26046511627906976" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_noti.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_ordfragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_profile.xml" value="0.2985529322162985" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_quickorder.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/hist_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/homequickord_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/newordlay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/noti_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/orderproditem_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/orders_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/ordprod_lay.xml" value="0.67" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/productadddialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/productitem_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/productupdatedialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/qordimg_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/quickfraglay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/reviews_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/viewitemdialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.3/MarketApp Seller 1.0.0.4/app/src/main/res/layout/zoom_imagedialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.17037037037037037" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_act_shopdet.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_act_shopsetup.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_mainarea.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_profile_settings.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_splashscreen.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_cat_products.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_catbd.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_ordfragment.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_quickorder.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/layout/productadddialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller 1.0.0.6/MarketApp Seller 1.0.0.4/app/src/main/res/mipmap-anydpi-v26/new_applogo.xml" value="0.1125" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_act_mybills.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_act_shopdet.xml" value="0.1634963768115942" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_act_shopsetup.xml" value="0.1634963768115942" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_act_vieworder.xml" value="0.25" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_mainarea.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_paymentactivity.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/activity_profile_settings.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/addsizeoth_lay.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/catproducts_lay.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/cats_lay.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/change_pass.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/earn_lay.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/forg_pass1.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/forg_pass2.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_cat_products.xml" value="0.33" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_catbd.xml" value="0.33" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_home.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_noti.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_ordfragment.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_profile.xml" value="0.5" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/fragment_quickorder.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/hist_lay.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/homequickord_lay.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/newordlay.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/noti_lay.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/orderproditem_lay.xml" value="0.33" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/orders_lay.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/ordprod_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/productadddialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/productitem_lay.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/productupdatedialog.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/qordimg_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/quickfraglay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/reviews_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/showsizeoth_lay.xml" value="0.20416666666666666" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/viewitemdialog.xml" value="0.18568840579710144" />
+        <entry key="..\:/MarketApp Final code/MarketApp Seller/Market Seller App/app/src/main/res/layout/zoom_imagedialog.xml" value="0.20416666666666666" />
+        <entry key="..\:/new Marketapp/MarketApp Seller 1.0.0.4/app/src/main/res/layout/activity_act_quickord.xml" value="0.33" />
+        <entry key="..\:/new Marketapp/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/new Marketapp/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_new_catalog.xml" value="0.20416666666666666" />
+        <entry key="..\:/new Marketapp/MarketApp Seller 1.0.0.4/app/src/main/res/layout/fragment_new_product.xml" value="0.33" />
+        <entry key="..\:/new Marketapp/MarketApp Seller 1.0.0.4/app/src/main/res/layout/homequickord_lay.xml" value="0.1696969696969697" />
+        <entry key="..\:/new Marketapp/MarketApp Seller 1.0.0.4/app/src/main/res/layout/nbyshops_lay.xml" value="0.67" />
+        <entry key="..\:/new Marketapp/MarketApp Seller 1.0.0.4/app/src/main/res/layout/productadddialog.xml" value="0.17192982456140352" />
+        <entry key="..\:/new Marketapp/MarketApp Seller 1.0.0.4/app/src/main/res/layout/productupdatedialog.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

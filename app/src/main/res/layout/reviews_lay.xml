@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp">
+
+    <TextView
+        android:id="@+id/revname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Bhaskar (9877253751)"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/revname3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/revdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:fontFamily="@font/poppins"
+        android:text="2021-09-20"
+        android:textColor="#292929"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/revreviewtxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/poppins"
+        android:text="This Shop Is Insane , I Loved It."
+        android:textColor="#292929"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/revratingbar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <RatingBar
+        android:id="@+id/revratingbar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:isIndicator="false"
+        android:max="5"
+        android:numStars="5"
+        android:progressBackgroundTint="#C6C6C6"
+        android:progressTint="@color/primcolor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/revname" />
+</androidx.constraintlayout.widget.ConstraintLayout>

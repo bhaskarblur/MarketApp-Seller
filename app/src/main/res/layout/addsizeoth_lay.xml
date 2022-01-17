@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp">
+
+    <EditText
+        android:id="@+id/fieldtxt"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/descboxbg"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter"
+        android:inputType="textPersonName"
+        android:paddingLeft="5dp"
+        android:textColor="@color/black"
+        android:textColorHint="#6C6C6C"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/textView43"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

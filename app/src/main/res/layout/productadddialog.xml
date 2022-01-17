@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="450dp"
+    android:background="@drawable/roundboxbg"
+    android:backgroundTint="@color/white">
+
+    <ProgressBar
+        android:id="@+id/progressBar5"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
+        android:indeterminateTint="@color/primcolor"
+        android:progressDrawable="@color/primcolor"
+        android:progressTint="@color/primcolor"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qty_rec" />
+
+    <Button
+        android:id="@+id/recs_add"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/descboxbg"
+        android:backgroundTint="@color/primcolor"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Add Size"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/recs_decr"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/addpdimg"
+        app:layout_constraintTop_toBottomOf="@+id/addpdname" />
+
+    <Button
+        android:id="@+id/recs_decr"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/sizeprobg"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Remove"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#CB0000"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/recs_add"
+        app:layout_constraintTop_toBottomOf="@+id/addpdname" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Select Image"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="@font/poppins"
+        android:text="Size:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addpdimg" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/size_rec"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView44"
+        app:layout_constraintTop_toBottomOf="@+id/addpdimg"
+        tools:itemCount="1"
+        tools:listitem="@layout/addsizeoth_lay">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/price_rec"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView45"
+        app:layout_constraintTop_toBottomOf="@+id/size_rec"
+        tools:itemCount="1"
+        tools:listitem="@layout/addsizeoth_lay">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="Price:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/addpdimg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView44" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mrp_rec"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/price_rec"
+        tools:itemCount="1"
+        tools:listitem="@layout/addsizeoth_lay">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="MRP:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/addpdimg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView45" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="Qty:"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/addpdimg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/qty_rec"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView46"
+        app:layout_constraintTop_toBottomOf="@+id/mrp_rec"
+        tools:itemCount="1"
+        tools:listitem="@layout/addsizeoth_lay" />
+
+    <EditText
+        android:id="@+id/addpdname"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/descboxbg"
+        android:ems="10"
+        android:fontFamily="@font/poppins"
+        android:hint="Enter Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="#6C6C6C"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView43"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/addpdimg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:clickable="true"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView43"
+        app:srcCompat="@drawable/imgsample" />
+
+    <Button
+        android:id="@+id/addpdsave"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/descboxbg"
+        android:backgroundTint="@color/primcolor"
+        android:fontFamily="@font/poppins"
+        android:foreground="?android:selectableItemBackground"
+        android:gravity="center"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addpdcanc"
+        app:layout_constraintTop_toBottomOf="@+id/qty_rec" />
+
+    <Button
+        android:id="@+id/addpdcanc"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/descboxbg"
+        android:backgroundTint="@color/white"
+        android:fontFamily="@font/poppins"
+        android:foreground="?android:selectableItemBackground"
+        android:text="Cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qty_rec" />
+</androidx.constraintlayout.widget.ConstraintLayout>

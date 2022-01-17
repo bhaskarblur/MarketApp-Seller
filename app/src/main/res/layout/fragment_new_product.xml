@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".newProduct">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="80dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/productname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins"
+                android:text="This is product name"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/product_img" />
+
+            <TextView
+                android:id="@+id/textView79"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="PRODUCT DESCRIPTION"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productname" />
+
+            <Button
+                android:id="@+id/recs_add2"
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/sizeprobg"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="Add"
+                android:textAllCaps="false"
+                android:textColor="@color/primcolor"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/recs_decr2"
+                app:layout_constraintTop_toBottomOf="@+id/productdesc" />
+
+            <Button
+                android:id="@+id/recs_decr2"
+                android:layout_width="70dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/sizeprobg"
+                android:fontFamily="@font/poppins"
+                android:gravity="center"
+                android:text="Remove"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="#CB0000"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productdesc" />
+
+            <TextView
+                android:id="@+id/textView80"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="VARIANTS"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productdesc" />
+
+            <TextView
+                android:id="@+id/productdesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:fontFamily="@font/poppins"
+                android:text="This is product description"
+                android:textColor="#363636"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView79" />
+
+            <ImageView
+                android:id="@+id/backbtn6"
+                android:layout_width="21dp"
+                android:layout_height="21dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+
+                android:scaleType="fitCenter"
+                android:src="@drawable/backbtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView70"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Edit Product"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/product_img"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/imgsample"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+            <TextView
+                android:id="@+id/textView81"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/poppins"
+                android:text="Size:"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView80" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/size_rec"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView81"
+                app:layout_constraintTop_toBottomOf="@+id/recs_decr2"
+                tools:itemCount="1"
+                tools:listitem="@layout/addsizeoth_lay">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/textView82"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="34dp"
+                android:fontFamily="@font/poppins"
+                android:text="Price:"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/addpdimg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView81" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/price_rec"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView82"
+                app:layout_constraintTop_toBottomOf="@+id/size_rec"
+                tools:itemCount="1"
+                tools:listitem="@layout/addsizeoth_lay">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/textView83"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="34dp"
+                android:fontFamily="@font/poppins"
+                android:text="MRP:"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView82" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mrp_rec"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView83"
+                app:layout_constraintTop_toBottomOf="@+id/price_rec"
+                tools:itemCount="1"
+                tools:listitem="@layout/addsizeoth_lay"></androidx.recyclerview.widget.RecyclerView>
+
+            <RadioButton
+                android:id="@+id/bestdeal_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="20dp"
+                android:buttonTint="@color/primcolor"
+                android:checked="false"
+                android:fontFamily="@font/poppins"
+                android:text="Best Deals"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mrp_rec" />
+
+            <RadioButton
+                android:id="@+id/topsell_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="7dp"
+                android:buttonTint="@color/primcolor"
+                android:checked="false"
+                android:fontFamily="@font/poppins"
+                android:text="Top Selling"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bestdeal_radio" />
+
+            <RadioButton
+                android:id="@+id/normal_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="7dp"
+                android:buttonTint="@color/primcolor"
+                android:checked="true"
+                android:fontFamily="@font/poppins"
+                android:text="Normal Product"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dealday_radio" />
+
+            <RadioButton
+                android:id="@+id/dealday_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="7dp"
+                android:buttonTint="@color/primcolor"
+                android:checked="false"
+                android:fontFamily="@font/poppins"
+                android:text="Deal Of The Day"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topsell_radio" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/savebtn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/roundboxbg"
+        android:backgroundTint="@color/primcolor"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

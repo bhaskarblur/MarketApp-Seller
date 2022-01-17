@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1023534579249",
+    "project_id": "marketapp-seller",
+    "storage_bucket": "marketapp-seller.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023534579249:android:d1c22f5516c8acb205df10",
+        "android_client_info": {
+          "package_name": "com.multivendor.marketsellerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1023534579249-hhp9alfaks4brhiq2onhj70nqd91mihj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.multivendor.marketsellerapp",
+            "certificate_hash": "efcf421ffd83240be91fba26f481e15e9f153b57"
+          }
+        },
+        {
+          "client_id": "1023534579249-85ksf0igs40194im47643mc1pm2cfga4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7arbDaHbbf9JvoeqpHEPgHJdH5UDpQ7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1023534579249-85ksf0igs40194im47643mc1pm2cfga4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

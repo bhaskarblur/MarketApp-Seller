@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/prodlay"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="#ffffff"
+        android:clickable="true"
+        android:foreground="?android:selectableItemBackground">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/size_rec"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/pricetxt3"
+            app:layout_constraintTop_toBottomOf="@+id/productname">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/productimg"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/common_google_signin_btn_icon_dark" />
+
+        <TextView
+            android:id="@+id/productname"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/poppins_medium"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="Parle-G"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/productimg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pricetxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:text="Price: ₹20"
+            android:textColor="#4C4C4C"
+            app:layout_constraintStart_toEndOf="@+id/productimg"
+            app:layout_constraintTop_toBottomOf="@+id/productname" />
+
+        <TextView
+            android:id="@+id/totalquat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="7dp"
+            android:textColor="#4C4C4C"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/productimg" />
+
+        <TextView
+            android:id="@+id/pricetxt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Select size:"
+            android:textColor="#4C4C4C"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/productimg"
+            app:layout_constraintTop_toBottomOf="@+id/pricetxt" />
+
+        <ImageView
+            android:id="@+id/prodedit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:foreground="?android:selectableItemBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/editicon"
+            app:tint="#636363" />
+
+        <ImageView
+            android:id="@+id/proddelete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp"
+            android:clickable="true"
+            android:foreground="?android:selectableItemBackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/deleteicon"
+            app:tint="#CD2626" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
