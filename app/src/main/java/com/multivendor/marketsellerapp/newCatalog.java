@@ -305,4 +305,9 @@ public class newCatalog extends Fragment {
     private void viewfunctions() {
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        getActivity().getViewModelStore().clear();
+    }
 }
