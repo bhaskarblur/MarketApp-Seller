@@ -42,6 +42,7 @@ public interface ApiWork {
     Call<newProductModel.productdetailResp> update_product(@Field("user_id") String userid,
                                                            @Field("product_id") String prodid,
                                                                @Field("city") String city,
+                                                               @Field("variation_id") String ids,
                                                                @Field("variants") String variants,
                                                                @Field("price") String mrp,
                                                                @Field("selling_price") String price,

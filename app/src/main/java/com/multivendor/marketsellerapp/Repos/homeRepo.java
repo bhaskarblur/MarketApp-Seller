@@ -62,6 +62,7 @@ public class homeRepo {
                 }
 
                 cartModel.multcartResp resp = response.body();
+                Log.d("fuck69","ok");
                 if (resp.getResult() != null) {
 
                     for (cartModel.singlecartResult data : resp.getResult()) {

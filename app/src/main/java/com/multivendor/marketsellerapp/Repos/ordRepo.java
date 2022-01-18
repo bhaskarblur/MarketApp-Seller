@@ -74,7 +74,7 @@ public class ordRepo {
 
             @Override
             public void onFailure(Call<cartModel.multcartResp> call, Throwable t) {
-                Log.d("failure:",t.getMessage());
+                Log.d("failure75:",t.getMessage());
             }
         });
 
@@ -118,7 +118,7 @@ public class ordRepo {
 
             @Override
             public void onFailure(Call<cartModel.multcartResp> call, Throwable t) {
-                Log.d("failure:",t.getMessage());
+                Log.d("failure74:",t.getMessage());
             }
         });
 
@@ -162,7 +162,7 @@ public class ordRepo {
 
             @Override
             public void onFailure(Call<cartModel.multcartResp> call, Throwable t) {
-                Log.d("failure:",t.getMessage());
+                Log.d("failure73:",t.getMessage());
             }
         });
     }

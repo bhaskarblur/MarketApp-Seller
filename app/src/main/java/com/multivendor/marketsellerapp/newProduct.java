@@ -87,6 +87,7 @@ public class newProduct extends Fragment {
     private String lat;
     private String longit;
     private LocationManager locationManager;
+    private StringBuilder variation = new StringBuilder();
     private FusedLocationProviderClient fusedLocationProviderClient;
     private String mLastLocation;
     public newProduct() {
@@ -209,7 +210,7 @@ public class newProduct extends Fragment {
                 ApiWork apiWork = retrofit.create(ApiWork.class);
 
                 Call<newProductModel.productdetailResp> call = apiWork.update_product(userid, product_id,city_name,
-                        size.toString(),mrp.toString(),price.toString(),product_type);
+                        variation.toString(), size.toString(),mrp.toString(),price.toString(),product_type);
 
                 call.enqueue(new Callback<newProductModel.productdetailResp>() {
                     @Override
@@ -376,6 +377,12 @@ public class newProduct extends Fragment {
                             sizelist.add(productdata.getResult().getProduct_variants().get(i).getSize());
                             mrplist.add(productdata.getResult().getProduct_variants().get(i).getPrice());
                             pricelist.add(productdata.getResult().getProduct_variants().get(i).getSelling_price());
+                            if(productdata.getResult().getProduct_variants().size()>1) {
+                                variation.append(productdata.getResult().getProduct_variants().get(i).getVariation_id() + ",");
+                            }
+                            else {
+                                variation.append(productdata.getResult().getProduct_variants().get(i).getVariation_id());
+                            }
                         }
                         adapter1 = new addszAdapter(getContext(), sizelist,"text");
                         adapter2 = new addszAdapter(getContext(), pricelist,"number");
