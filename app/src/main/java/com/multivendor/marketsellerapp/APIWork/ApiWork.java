@@ -38,12 +38,13 @@ public interface ApiWork {
                                                  @Field("cart_id") String cartid);
 
     @FormUrlEncoded
-    @POST("update_product")
+    @POST("update-product")
     Call<newProductModel.productdetailResp> update_product(@Field("user_id") String userid,
                                                            @Field("product_id") String prodid,
+                                                               @Field("city") String city,
                                                                @Field("variants") String variants,
-                                                               @Field("mrp") String mrp,
-                                                               @Field("price") String price,
+                                                               @Field("price") String mrp,
+                                                               @Field("selling_price") String price,
                                                                @Field("product_type") String type);
 
 

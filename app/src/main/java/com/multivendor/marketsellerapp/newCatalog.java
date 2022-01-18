@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -157,7 +158,7 @@ public class newCatalog extends Fragment {
 
                                                     shbinding.searchres.setVisibility(View.VISIBLE);
                                                     nbyshopAdapter = new nbyshopAdapter(getContext(),homeprodResult.getAll_products());
-                                                    LinearLayoutManager glm = new LinearLayoutManager(getContext());
+                                                    GridLayoutManager glm = new GridLayoutManager(getContext(),2);
                                                     glm.setOrientation(RecyclerView.VERTICAL);
                                                     shbinding.searchres.setLayoutManager(glm);
                                                     shbinding.searchres.setAdapter(nbyshopAdapter);
@@ -182,10 +183,14 @@ public class newCatalog extends Fragment {
                                         public void run() {
                                             if(homeprodResult.getAll_products()!=null) {
                                                 if (homeprodResult.getAll_products().size() > 0) {
+
+                                                    shbinding.searchres.setVisibility(View.VISIBLE);
+                                                    nbyshopAdapter = new nbyshopAdapter(getContext(),homeprodResult.getAll_products());
+                                                    GridLayoutManager glm = new GridLayoutManager(getContext(),2);
+                                                    glm.setOrientation(RecyclerView.VERTICAL);
+                                                    shbinding.searchres.setLayoutManager(glm);
+                                                    shbinding.searchres.setAdapter(nbyshopAdapter);
                                                     loadsearchres();
-                                                    Toast.makeText(getContext(), "Hello!", Toast.LENGTH_SHORT).show();
-
-
                                                 }
                                             }
                                         }
@@ -227,10 +232,13 @@ public class newCatalog extends Fragment {
                                                 public void run() {
                                                     if(homeprodResult.getAll_products()!=null) {
                                                         if (homeprodResult.getAll_products().size() > 0) {
+                                                            shbinding.searchres.setVisibility(View.VISIBLE);
+                                                            nbyshopAdapter = new nbyshopAdapter(getContext(),homeprodResult.getAll_products());
+                                                            GridLayoutManager glm = new GridLayoutManager(getContext(),2);
+                                                            glm.setOrientation(RecyclerView.VERTICAL);
+                                                            shbinding.searchres.setLayoutManager(glm);
+                                                            shbinding.searchres.setAdapter(nbyshopAdapter);
                                                             loadsearchres();
-                                                            Toast.makeText(getContext(), "Hello!", Toast.LENGTH_SHORT).show();
-
-
                                                         }
                                                     }
                                                 }
@@ -276,9 +284,6 @@ public class newCatalog extends Fragment {
                     shbinding.searchres.setVisibility(View.VISIBLE);
                     searchfun(s.toString());
                 }
-                else  {
-                    shbinding.searchres.setVisibility(View.INVISIBLE);
-                }
             }
         });
 
@@ -308,6 +313,7 @@ public class newCatalog extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
+
         getActivity().getViewModelStore().clear();
     }
 }
