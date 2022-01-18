@@ -107,14 +107,14 @@
             android:layout_width="40dp"
             android:layout_height="20sp"
             android:layout_marginStart="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/poppins"
             android:text="10"
-            android:textColor="#4C4C4C"
             android:textAlignment="viewStart"
             android:textAllCaps="false"
+            android:textColor="#4C4C4C"
 
-            android:textSize="18sp"
+            android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/pricetxt3"
             app:layout_constraintTop_toBottomOf="@+id/seltsize" />
 

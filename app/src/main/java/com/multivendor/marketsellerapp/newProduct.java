@@ -129,6 +129,7 @@ public class newProduct extends Fragment {
         }
         Bundle bundle=getArguments();
         product_id=bundle.getString("product_id");
+
         userid=getActivity().getSharedPreferences("userlogged",0).getString("userid","");
     }
 

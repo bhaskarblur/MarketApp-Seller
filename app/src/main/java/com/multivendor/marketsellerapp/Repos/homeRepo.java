@@ -87,14 +87,15 @@ public class homeRepo {
     }
 
     private void getnbyshopsdatafromSource(String userid,String lat,String longit,String cityname) {
-        Log.d("latandlong",lat+","+longit);
+
+        Log.d("user___Id",userid);
         Log.d("city_name",cityname);
         Retrofit retrofit = new Retrofit.Builder().baseUrl(baseurl.baseurl)
                 .addConverterFactory(GsonConverterFactory.create()).build();
 
         ApiWork apiWork= retrofit.create(ApiWork.class);
 
-        Call<newProductModel.homeprodResp> call=apiWork.getallproducts(userid,lat,longit,cityname);
+        Call<newProductModel.homeprodResp> call=apiWork.getallproducts(userid);
 
         call.enqueue(new Callback<newProductModel.homeprodResp>() {
             @Override
@@ -111,6 +112,7 @@ public class homeRepo {
 
                 if(storedata.getResult()!=null) {
                     Log.d("message12",storedata.getSuccess());
+                    Log.d("msghere",storedata.getMessage());
                     nyshopdata.setValue(storedata.getResult());
                 }
 

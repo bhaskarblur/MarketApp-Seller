@@ -16,9 +16,7 @@ public interface ApiWork {
 
     @FormUrlEncoded
     @POST("seller_products")
-    Call<newProductModel.homeprodResp> getallproducts(@Field("user_id") String userid, @Field("latitude") String lat,
-                                                      @Field("longitude") String longit, @Field("city")
-                                                       String cityname);
+    Call<newProductModel.homeprodResp> getallproducts(@Field("user_id") String userid);
     @FormUrlEncoded
     @POST("category_products")
     Call<newProductModel .homeprodResp> getcategoryproducts(@Field("category_name") String catname,@Field("latitude") String lat,

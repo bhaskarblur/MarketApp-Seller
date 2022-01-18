@@ -7,6 +7,15 @@ public class newProductModel {
     public class homeprodResp {
         public String success;
         public homeprodResult result;
+        public String message;
+
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
 
         public String getSuccess() {
             return success;
@@ -93,6 +102,15 @@ public class newProductModel {
         public String product_cut_price;
         public String discount_rate;
         public String product_category;
+        public String user_id;
+
+        public String getUser_id() {
+            return user_id;
+        }
+
+        public void setUser_id(String user_id) {
+            this.user_id = user_id;
+        }
 
         public String getProduct_category() {
             return product_category;

@@ -3,12 +3,14 @@ package com.multivendor.marketsellerapp.Adapters;
 import android.content.Context;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -46,12 +48,12 @@ public class nbyshopAdapter extends RecyclerView.Adapter<nbyshopAdapter.viewHold
 
     @Override
     public void onBindViewHolder( viewHolder holder, int position) {
-        if(nbyshopsModel.get(position).getProduct_image()!=null) {
-            Picasso.get().load(nbyshopsModel.get(position).getProduct_image()).fit().into(holder.shopimg);
-        }
-        else {
-            Picasso.get().load(R.drawable.imgsample).fit().into(holder.shopimg);
-        }
+            if (nbyshopsModel.get(position).getProduct_image() != null) {
+                Picasso.get().load(nbyshopsModel.get(position).getProduct_image()).fit().into(holder.shopimg);
+            } else {
+                Picasso.get().load(R.drawable.imgsample).fit().into(holder.shopimg);
+            }
+
 //        holder.shopimg.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -66,7 +68,6 @@ public class nbyshopAdapter extends RecyclerView.Adapter<nbyshopAdapter.viewHold
 //            }
 //
 //       });
-
 
         holder.shopname.setText(nbyshopsModel.get(position).getProduct_name());
         holder.shoptype.setText(nbyshopsModel.get(position).getProduct_description());

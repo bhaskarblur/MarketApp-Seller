@@ -101,6 +101,8 @@ public class newCatalog extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        userid=getActivity().getSharedPreferences("userlogged",0)
+                .getString("userid","");
         categfragViewModel=new ViewModelProvider(getActivity()).get(homeViewModel.class);
     }
 
