@@ -15,7 +15,7 @@ public interface ApiWork {
 
 
     @FormUrlEncoded
-    @POST("all_products")
+    @POST("seller_products")
     Call<newProductModel.homeprodResp> getallproducts(@Field("user_id") String userid, @Field("latitude") String lat,
                                                       @Field("longitude") String longit, @Field("city")
                                                        String cityname);
@@ -26,7 +26,7 @@ public interface ApiWork {
                                                                     String cityname);
 
     @FormUrlEncoded
-    @POST("product_detail")
+    @POST("seller_product_detail")
     Call<newProductModel.productdetailResp> getproduct_details(@Field("user_id") String userid,
                                                                @Field("product_id") String productid);
 
@@ -46,7 +46,10 @@ public interface ApiWork {
                                                                @Field("variants") String variants,
                                                                @Field("price") String mrp,
                                                                @Field("selling_price") String price,
-                                                               @Field("product_type") String type);
+                                                               @Field("normal_product") String type1,
+                                                           @Field("best_deal_product") String type2,
+                                                           @Field("top_selling_product") String type3,
+                                                           @Field("deal_day_product") String type4);
 
 
 }

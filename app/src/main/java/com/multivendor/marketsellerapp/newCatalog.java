@@ -311,9 +311,8 @@ public class newCatalog extends Fragment {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-
+    public void onDestroyView() {
+        super.onDestroyView();
         getActivity().getViewModelStore().clear();
     }
 }

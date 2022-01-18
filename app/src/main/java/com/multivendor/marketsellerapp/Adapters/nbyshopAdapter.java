@@ -71,11 +71,18 @@ public class nbyshopAdapter extends RecyclerView.Adapter<nbyshopAdapter.viewHold
         holder.shopname.setText(nbyshopsModel.get(position).getProduct_name());
         holder.shoptype.setText(nbyshopsModel.get(position).getProduct_description());
        // holder.shopratingtxt.setText(nbyshopsModel.get(position).getShopratings());
-        holder.shoplocat.setText("Rs "+nbyshopsModel.get(position).getProduct_price());
-       // holder.shopratingtxt.setText(String.valueOf(nbyshopsModel.get(position).getRating()));
-        holder.shopdist.setText("Rs "+nbyshopsModel.get(position).getProduct_cut_price());
-        holder.shopdist.setPaintFlags(holder.shopdist.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
-        holder.discount.setText(nbyshopsModel.get(position).getDiscount_rate());
+        if(nbyshopsModel.get(position).getProduct_price()!=null) {
+            holder.shoplocat.setText("Rs " + nbyshopsModel.get(position).getProduct_price());
+            // holder.shopratingtxt.setText(String.valueOf(nbyshopsModel.get(position).getRating()));
+            holder.shopdist.setText("Rs " + nbyshopsModel.get(position).getProduct_cut_price());
+            holder.shopdist.setPaintFlags(holder.shopdist.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+            holder.discount.setText(nbyshopsModel.get(position).getDiscount_rate());
+        }
+        else {
+            holder.shoplocat.setVisibility(View.INVISIBLE);
+            holder.shopdist.setVisibility(View.INVISIBLE);
+            holder.discount.setVisibility(View.INVISIBLE);
+        }
         holder.shopcard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

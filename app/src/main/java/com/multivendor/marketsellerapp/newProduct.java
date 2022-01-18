@@ -90,6 +90,14 @@ public class newProduct extends Fragment {
     private StringBuilder variation = new StringBuilder();
     private FusedLocationProviderClient fusedLocationProviderClient;
     private String mLastLocation;
+    private String norm_count="1";
+    private String deal_day_count="0";
+    private String best_deal_count="0";
+    private String top_selling_count="0";
+
+    List<String> sizelist=new ArrayList<>();
+    List<String> mrplist=new ArrayList<>();
+    List<String> pricelist=new ArrayList<>();
     public newProduct() {
         // Required empty public constructor
     }
@@ -145,6 +153,10 @@ public class newProduct extends Fragment {
                     binding.dealdayRadio.setChecked(false);
                     binding.topsellRadio.setChecked(false);
                     product_type="normal_product";
+                    norm_count="1";
+                    best_deal_count="0";
+                    top_selling_count="0";
+                    deal_day_count="0";
                 }
             }
         });
@@ -157,6 +169,10 @@ public class newProduct extends Fragment {
                     binding.dealdayRadio.setChecked(false);
                     binding.topsellRadio.setChecked(false);
                     product_type="best_deal_product";
+                    norm_count="0";
+                    best_deal_count="1";
+                    top_selling_count="0";
+                    deal_day_count="0";
                 }
             }
         });
@@ -169,6 +185,10 @@ public class newProduct extends Fragment {
                     binding.bestdealRadio.setChecked(false);
                     binding.topsellRadio.setChecked(false);
                     product_type="deal_day_product";
+                    norm_count="0";
+                    best_deal_count="0";
+                    top_selling_count="0";
+                    deal_day_count="1";
                 }
             }
         });
@@ -181,6 +201,10 @@ public class newProduct extends Fragment {
                     binding.dealdayRadio.setChecked(false);
                     binding.bestdealRadio.setChecked(false);
                     product_type="top_selling_product";
+                    norm_count="0";
+                    best_deal_count="0";
+                    top_selling_count="1";
+                    deal_day_count="0";
                 }
             }
         });
@@ -210,7 +234,8 @@ public class newProduct extends Fragment {
                 ApiWork apiWork = retrofit.create(ApiWork.class);
 
                 Call<newProductModel.productdetailResp> call = apiWork.update_product(userid, product_id,city_name,
-                        variation.toString(), size.toString(),mrp.toString(),price.toString(),product_type);
+                        variation.toString(), size.toString(),mrp.toString(),price.toString(),norm_count,best_deal_count,
+                        top_selling_count,deal_day_count);
 
                 call.enqueue(new Callback<newProductModel.productdetailResp>() {
                     @Override
@@ -253,10 +278,11 @@ public class newProduct extends Fragment {
         binding.recsDecr2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(adapter1.list.size()>1) {
+                if(adapter1.list.size()>0) {
                     adapter1.list.remove(adapter1.list.size() - 1);
                     adapter2.list.remove(adapter2.list.size() - 1);
                     adapter3.list.remove(adapter3.list.size() - 1);
+
                     adapter1.notifyDataSetChanged();
                     adapter2.notifyDataSetChanged();
                     adapter3.notifyDataSetChanged();
@@ -370,9 +396,7 @@ public class newProduct extends Fragment {
                     }
 
                     if (productdata.getResult().getProduct_variants().size() > 0) {
-                        List<String> sizelist=new ArrayList<>();
-                        List<String> mrplist=new ArrayList<>();
-                        List<String> pricelist=new ArrayList<>();
+
                         for (int i=0;i<productdata.getResult().getProduct_variants().size();i++){
                             sizelist.add(productdata.getResult().getProduct_variants().get(i).getSize());
                             mrplist.add(productdata.getResult().getProduct_variants().get(i).getPrice());
@@ -384,9 +408,11 @@ public class newProduct extends Fragment {
                                 variation.append(productdata.getResult().getProduct_variants().get(i).getVariation_id());
                             }
                         }
-                        adapter1 = new addszAdapter(getContext(), sizelist,"text");
-                        adapter2 = new addszAdapter(getContext(), pricelist,"number");
-                        adapter3 = new addszAdapter(getContext(), mrplist,"number");
+
+                            adapter1 = new addszAdapter(getContext(), sizelist, "text");
+                            adapter2 = new addszAdapter(getContext(), pricelist, "number");
+                            adapter3 = new addszAdapter(getContext(), mrplist, "number");
+
 
                         LinearLayoutManager llm1 = new LinearLayoutManager(getContext());
                         llm1.setOrientation(RecyclerView.HORIZONTAL);
@@ -403,6 +429,29 @@ public class newProduct extends Fragment {
                         binding.priceRec.setAdapter(adapter2);
                         binding.mrpRec.setLayoutManager(llm3);
                         binding.mrpRec.setAdapter(adapter3);
+                    }
+                    else {
+                        adapter1 = new addszAdapter(getContext(), sizelist, "text");
+                        adapter2 = new addszAdapter(getContext(), pricelist, "number");
+                        adapter3 = new addszAdapter(getContext(), mrplist, "number");
+
+
+                        LinearLayoutManager llm1 = new LinearLayoutManager(getContext());
+                        llm1.setOrientation(RecyclerView.HORIZONTAL);
+                        LinearLayoutManager llm2 = new LinearLayoutManager(getContext());
+                        LinearLayoutManager llm3 = new LinearLayoutManager(getContext());
+                        LinearLayoutManager llm4 = new LinearLayoutManager(getContext());
+                        llm2.setOrientation(RecyclerView.HORIZONTAL);
+                        llm3.setOrientation(RecyclerView.HORIZONTAL);
+                        llm4.setOrientation(RecyclerView.HORIZONTAL);
+
+                        binding.sizeRec.setLayoutManager(llm1);
+                        binding.sizeRec.setAdapter(adapter1);
+                        binding.priceRec.setLayoutManager(llm2);
+                        binding.priceRec.setAdapter(adapter2);
+                        binding.mrpRec.setLayoutManager(llm3);
+                        binding.mrpRec.setAdapter(adapter3);
+
                     }
                     binding.productname.setText(productdata.getResult().getProduct_name().toString());
                     binding.productdesc.setText(productdata.getResult().getProduct_description().toString());

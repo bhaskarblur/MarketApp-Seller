@@ -27,7 +27,7 @@ public class addszAdapter extends RecyclerView.Adapter<addszAdapter.viewHolder> 
     }
 
     private Context context;
-    public List<String> list=new ArrayList<>();
+    public List<String> list;
     @NonNull
     @Override
     public viewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
